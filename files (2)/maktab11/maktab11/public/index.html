@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11-Maktab — Bilim va kelajak sari!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAMUNA: barcha ma'lumotlar va rasmlar vaqtinchalik. Haqiqiylariga almashtiring. -->
+  <div class="wrapper1">
+    <a class="wrapper14" href="#home">
+      <span class="wrapper15">11</span>
+      <span class="text1">11-Maktab</span>
+    </a>
+    <button class="wrapper16" id="burger" aria-label="Menyu">☰</button>
+    <nav class="wrapper17" id="menu">
+      <a href="#home">Bosh sahifa</a>
+      <a href="#about">Maktab haqida</a>
+      <a href="#teachers">O‘qituvchilar</a>
+      <a href="#news">Yangiliklar</a>
+      <a href="#gallery">Galereya</a>
+      <a href="#students">O‘quvchilar</a>
+      <a href="#contact">Aloqa</a>
+      <a href="cabinet.html">Kabinet</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- BOSH SAHIFA -->
+    <section class="page" id="home">
+      <div class="wrapper2">
+        <div class="wrapper18">
+          <h1 class="text2">11-Maktab — Bilim va kelajak sari!</h1>
+          <p class="text3">Har bir o‘quvchi o‘z yo‘lini topadigan, bilim va tarbiya uyg‘unlashgan maktab.</p>
+          <a class="wrapper19" href="#about">Maktab haqida</a>
+          <a class="wrapper19 wrapper20" href="#contact">Bog‘lanish</a>
+        </div>
+        <img class="wrapper21" data-ph="Maktab binosi (namuna rasm)" alt="Maktab binosi">
+      </div>
+      <div class="wrapper3">
+        <h2 class="text4">Maktab haqida qisqacha</h2>
+        <p class="text3">[NAMUNA] 11-Maktab o‘quvchilarga sifatli ta’lim, xorijiy tillar, informatika va sport
+          yo‘nalishlarida bilim beradi. Bu matnni maktabning haqiqiy ma’lumoti bilan almashtiring.</p>
+      </div>
+      <div class="wrapper3">
+        <h2 class="text4">So‘nggi yangiliklar</h2>
+        <div class="wrapper12" id="homeNews"></div>
+        <p><a class="wrapper19" href="#news">Barcha yangiliklar</a><a class="wrapper19 wrapper20"
+            style="color:var(--blue)" href="#students">Dars jadvali</a></p>
+      </div>
+    </section>
+
+    <!-- MAKTAB HAQIDA -->
+    <section class="page" id="about">
+      <div class="wrapper3">
+        <h2 class="text4">Maktab haqida</h2>
+        <div class="wrapper12">
+          <div class="wrapper11">
+            <h3 class="text5">Tarix</h3>
+            <p class="text3">[NAMUNA] Maktab 30-yilda tashkil topgan. Tarixiy ma’lumotni shu yerga yozing.</p>
+          </div>
+          <div class="wrapper11">
+            <h3 class="text5">Direktor</h3>
+            <p class="text3">[NAMUNA] Direktor: F.I.Sh. Qisqacha tarjimai hol va murojaat matni.</p>
+          </div>
+          <div class="wrapper11">
+            <h3 class="text5">Maqsad va yutuqlar</h3>
+            <p class="text3">[NAMUNA] Maktabning maqsadi, olimpiada va tanlovlardagi yutuqlari.</p>
+          </div>
+        </div>
+        <div class="wrapper4">
+          <div><b class="count" data-to="1000">0</b><span class="text3">O‘quvchilar (namuna)</span></div>
+          <div><b class="count" data-to="70">0</b><span class="text3">O‘qituvchilar (namuna)</span></div>
+          <div><b class="count" data-to="33">0</b><span class="text3">Sinflar (namuna)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O'QITUVCHILAR -->
+    <section class="page" id="teachers">
+      <div class="wrapper3">
+        <h2 class="text4">O‘qituvchilar</h2>
+        <div class="wrapper12" id="teacherList"></div>
+      </div>
+    </section>
+
+    <!-- YANGILIKLAR -->
+    <section class="page" id="news">
+      <div class="wrapper3">
+        <h2 class="text4">Yangiliklar</h2>
+        <div class="wrapper27">
+          <select id="newsCat">
+            <option value="">Barcha kategoriyalar</option>
+          </select>
+          <select id="newsSort">
+            <option value="new">Avval yangilari</option>
+            <option value="old">Avval eskilari</option>
+          </select>
+        </div>
+        <div class="wrapper12" id="newsList"></div>
+      </div>
+    </section>
+
+    <!-- YANGILIK SAHIFASI -->
+    <section class="page" id="newsdetail">
+      <div class="wrapper3" id="newsBody"></div>
+    </section>
+
+    <!-- GALEREYA -->
+    <section class="page" id="gallery">
+      <div class="wrapper3">
+        <h2 class="text4">Galereya</h2>
+        <div class="wrapper7" id="galleryList"></div>
+      </div>
+    </section>
+
+    <!-- O'QUVCHILAR -->
+    <section class="page" id="students">
+      <div class="wrapper3">
+        <h2 class="text4">O‘quvchilar bo‘limi</h2>
+        <div class="wrapper22">
+          <button class="tab on" data-tab="t1">Dars jadvali</button>
+          <button class="tab" data-tab="t2">Fanlar</button>
+          <button class="tab" data-tab="t3">Resurslar</button>
+          <button class="tab" data-tab="t4">Uy vazifalari</button>
+        </div>
+        <div class="tabbox on" id="t1">
+          <div class="wrapper28" id="classBtns"></div>
+          <div class="wrapper29"><button class="wrapper19" id="printBtn">PDF / Chop etish</button><span
+              class="text3">PDF uchun chop etish oynasida “PDF sifatida saqlash” ni tanlang.</span></div>
+          <div id="schedule"></div>
+        </div>
+        <div class="tabbox" id="t2">
+          <ul class="wrapper24" id="subjects"></ul>
+        </div>
+        <div class="tabbox" id="t3">
+          <ul class="wrapper24">
+            <li><a href="https://my.uzedu.uz" target="_blank" rel="noopener">my.uzedu.uz — elektron ta’lim</a></li>
+            <li><a href="https://kundalik.com" target="_blank" rel="noopener">Kundalik.com — elektron kundalik</a></li>
+            <li><a href="https://uz.khanacademy.org" target="_blank" rel="noopener">Khan Academy</a></li>
+          </ul>
+        </div>
+        <div class="tabbox" id="t4">
+          <div class="wrapper25">
+            <input id="hwSubject" placeholder="Fan (masalan: Matematika)">
+            <input id="hwText" placeholder="Vazifa matni">
+            <button class="wrapper19" id="hwAdd">Qo‘shish</button>
+          </div>
+          <ul class="wrapper24" id="hwList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALOQA -->
+    <section class="page" id="contact">
+      <div class="wrapper3">
+        <h2 class="text4">Aloqa</h2>
+        <div class="wrapper9">
+          <div>
+            <p class="text3">📍 [Manzil] : Jizzax shahar,sharof rashidov tuman 11-Maktab</p>
+            <p class="text3">📞 [Tel] +998 33 516 51 11</p>
+            <p class="text3">✉️ [Ma'lumot] info@maktab11.uz</p>
+            <p class="text3"><a href="https://t.me/" target="_blank" rel="noopener">Telegram</a> · <a
+                href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a> · <a
+                href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a></p>
+            <form class="wrapper26" id="contactForm">
+              <input id="cName" placeholder="Ismingiz" required>
+              <input id="cMail" type="email" placeholder="Elektron pochta" required>
+              <textarea id="cMsg" rows="4" placeholder="Xabaringiz" required></textarea>
+              <button class="wrapper19" type="submit">Xabar yuborish</button>
+              <p class="text3" id="formNote"></p>
+            </form>
+          </div>
+          <iframe title="Xarita" loading="lazy" src="https://www.google.com/maps?q=Toshkent&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main> 
+
+  <footer class="wrapper10">© 2026 11-Maktab. Namuna sayt: ma’lumotlar almashtirilishi kerak. · <a
+      href="admin.html">Admin</a></footer>
+
+  <div class="wrapper13" id="lightbox"><img alt=""></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

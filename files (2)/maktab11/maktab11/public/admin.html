@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Admin — 11-Maktab</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper1">
+  <a class="wrapper14" href="index.html"><span class="wrapper15">11</span><span class="text1">Admin panel</span></a>
+  <button class="wrapper19" id="logout" hidden>Chiqish</button>
+</div>
+<main class="wrapper30">
+  <form id="login" class="wrapper26">
+    <h2 class="text4">Kirish</h2>
+    <input id="pw" type="password" placeholder="Parol" required autocomplete="current-password">
+    <button class="wrapper19">Kirish</button>
+    <p class="text3" id="lerr"></p>
+  </form>
+
+  <div id="panel" hidden>
+    <div class="wrapper22">
+      <button class="tab on" data-p="pn">Yangiliklar</button>
+      <button class="tab" data-p="ps">Dars jadvali</button>
+      <button class="tab" data-p="pu">Foydalanuvchilar</button>
+    </div>
+
+    <section id="pn">
+      <form class="wrapper26" id="nForm">
+        <input type="hidden" name="id" id="nId">
+        <input name="title" placeholder="Sarlavha" required maxlength="200">
+        <select name="category" id="nCat"></select>
+        <input name="date" id="nDate" type="date" required>
+        <input name="summary" placeholder="Qisqacha matn (300 belgigacha)" required maxlength="300">
+        <textarea name="body" rows="6" placeholder="To‘liq matn"></textarea>
+        <input name="image" type="file" accept="image/jpeg,image/png,image/webp">
+        <label class="text3"><input type="checkbox" name="removeImage" value="1" style="width:auto"> Mavjud rasmni o‘chirish</label>
+        <div><button class="wrapper19" type="submit" id="nSave">Qo‘shish</button><button class="wrapper19 wrapper20" style="color:var(--blue)" type="button" id="nReset">Tozalash</button></div>
+        <p class="text3" id="nMsg"></p>
+      </form>
+      <div id="nList"></div>
+    </section>
+
+    <section id="ps" hidden>
+      <div class="wrapper27"><select id="sCls"></select><select id="sDay"></select></div>
+      <p class="text3" id="sNote"></p>
+      <div class="wrapper23">
+        <table class="sch"><thead><tr><th>№</th><th>Vaqt</th><th>Fan</th><th>O‘qituvchi</th><th>Xona</th><th></th></tr></thead><tbody id="sRows"></tbody></table>
+      </div>
+      <div><button class="wrapper19 wrapper20" style="color:var(--blue)" id="sAdd">+ Dars qo‘shish</button><button class="wrapper19" id="sSave">Saqlash</button></div>
+      <p class="text3" id="sMsg"></p>
+    </section>
+
+    <section id="pu" hidden>
+      <form class="wrapper26" id="uForm">
+        <select id="uRole"><option value="teacher">O‘qituvchi</option><option value="student">O‘quvchi</option><option value="parent">Ota-ona</option></select>
+        <input id="uName" placeholder="Ism familiya" required maxlength="80">
+        <input id="uLogin" placeholder="Login (lotin harf/raqam)" required maxlength="30" autocomplete="off">
+        <input id="uPass" type="text" placeholder="Parol (kamida 6 belgi)" required minlength="6" autocomplete="off">
+        <select id="uCls" hidden></select>
+        <select id="uChild" hidden></select>
+        <input id="uSubj" placeholder="Fan (masalan: Matematika)" maxlength="60">
+        <button class="wrapper19">Hisob yaratish</button>
+        <p class="text3" id="uMsg"></p>
+      </form>
+      <div id="uList"></div>
+    </section>
+  </div>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
